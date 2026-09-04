@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu+Condensed&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Viga&display=swap");
+
+/* html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+} */
+
+#bimbel {
+  scroll-margin-top: 40px;
+}
+#agenda {
+  scroll-margin-top: 40px;
+}
+.navbar {
+  font-family: "Viga", sans-serif;
+  /* position: relative; */
+  background-color: aliceblue;
+  z-index: 10;
+}
+
+.navbar.sticky {
+  background-color: blue;
+}
+
+.nav-link.white,
+.navbar-brand.white,
+.navbar-toggler-icon.white {
+  color: white !important;
+}
+
+.navbar-toggler-icon.white {
+  background-color: #f5f5f5 !important;
+}
+
+.navbar-brand span img {
+  width: 50px;
+}
+
+.navbar .navbar-brand {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.container .display-4 {
+  font-size: 35px;
+  color: blue;
+  text-align: center;
+  margin-top: 90px;
+  padding: 0 25px;
+}
+.container .display-4 span {
+  font-weight: 700;
+}
+
+/* jumbotron */
+
+.jumbotron {
+  height: 70vh;
+  position: relative;
+}
+.container .satu {
+  align-items: center;
+  display: flex;
+}
+
+.jumbotron .carousel {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+}
+.jumbotron .carousel img {
+  width: 100%;
+  height: 70vh;
+  /* object-fit: cover; */
+}
+.jumbotron-about {
+  background-image: url(img/jumbotron-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.jumbotron-agenda {
+  background-image: url(img/persiapan.png);
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.jumbotron-galery {
+  background-image: url(img/ai.png);
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron::after {
+  content: "";
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  bottom: 0;
+  position: absolute;
+  display: block;
+  height: 70%;
+  width: 100%;
+}
+
+.info-panel {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 1.6);
+  margin-top: -100px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px 10px;
+  margin-bottom: 20px;
+}
+
+.tombol-wrapper {
+  margin-top: -200px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.info-panel img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.info-panel h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-panel p {
+  color: #666;
+  font-size: small;
+}
+.working-space {
+  margin-top: 50px;
+}
+.working-space img {
+  padding: 30px 30px;
+}
+
+.working-space h3 {
+  font-size: 45px;
+  font-weight: 300;
+  padding: 0 20px;
+  text-align: start;
+}
+.working-space span {
+  font-weight: 700;
+}
+
+.working-space p {
+  padding: 20px;
+}
+
+.working-space .tombol {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* agenda */
+.agenda {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0b63dc;
+}
+
+.card {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 15px !important;
+  color: #0b63dc;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: black !important;
+}
+
+/* bimbel */
+
+.bimbel {
+  background-color: #0b63dc;
+  color: white;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.bimbel .header h2 {
+  color: white;
+}
+
+.bimbel .card {
+  color: black;
+}
+
+.bimbel .tombol {
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: left !important;
+}
+
+/* running image */
+
+.runningImage .header p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b63dc;
+}
+
+.running-image {
+  width: 100%;
+  overflow: hidden;
+  margin: 30px auto;
+  border: 1px #999 solid;
+}
+
+.track-right,
+.track-left {
+  display: flex;
+}
+
+.track-right img,
+.track-left img {
+  height: 150px;
+  margin-right: 2px;
+}
+
+.bounce {
+  animation: bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* spinner */
+
+.loader {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes run-right {
+  from {
+    transform: translateX(var(--move));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* galery */
+
+.galery {
+  padding: 50px 20px;
+  overflow-x: hidden;
+}
+
+.galery img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* about */
+
+.about {
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.about img {
+  width: 300px;
+}
+
+/* footer */
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+.footer i {
+  color: white;
+  margin-right: 20px;
+}
+
+.waGroup {
+  width: 100%;
+}
+
+.bi {
+  font-size: 26px;
+  padding-right: 10px;
+}
+@media (min-width: 956px) {
+  #bimbel {
+    scroll-margin-top: 60px;
+  }
+  #agenda {
+    scroll-margin-top: 60px;
+  }
+  .navbar {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+  .navbar.sticky {
+    background-color: blue;
+    padding: 10px;
+  }
+  .nav-link {
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: blue !important;
+  }
+
+  .nav-link.white {
+    color: white !important;
+  }
+
+  .navbar-brand.white {
+    color: white !important;
+  }
+
+  .navbar-brand span img {
+    width: 60px !important;
+  }
+  .tombol {
+    border-radius: 30px;
+    align-content: center;
+    display: inline-block;
+  }
+
+  .navbar .nav-link:hover {
+    color: green !important;
+    transform: scale(1.02);
+  }
+  /* .navbar .nav-link:hover::after {
+    content: "";
+    width: 70%;
+    border-bottom: 5px solid #0b63dc;
+    color: blue;
+    margin: auto;
+    display: block;
+    padding-bottom: 6px;
+    margin-top: -11px;
+  } */
+  .navbar .nav-link.underline::after {
+    content: "";
+    width: 70%;
+    border-bottom: 5px solid #0b63dc;
+    color: blue;
+    margin: auto;
+    display: block;
+    padding-bottom: 6px;
+    margin-top: -6px;
+  }
+  .navbar .nav-link.underline.white::after {
+    border-bottom: 5px solid white;
+  }
+
+  .jumbotron {
+    margin-top: -90px;
+    height: 100vh;
+    position: relative;
+  }
+
+  .jumbotron .carousel img {
+    height: 100vh;
+    width: 100%;
+    /* object-fit: cover; */
+  }
+
+  .container .display-4 {
+    font-size: 65px;
+    color: blue;
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 40px;
+  }
+
+  .working-space {
+    margin-top: 70px;
+  }
+
+  .working-space h3 {
+    font-size: 76px;
+    text-align: left;
+  }
+
+  /* agenda */
+
+  .agenda {
+    padding: 50px 200px;
+  }
+
+  .header h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    border: 1px solid black;
+  }
+
+  /* bimbel */
+
+  .bimbel {
+    padding: 50px 200px;
+  }
+
+  /* runningImage */
+
+  .runningImage {
+    padding: 50px 200px;
+  }
+
+  /* about */
+
+  .about img {
+    width: 500px;
+    border: 1px #999 solid;
+  }
+  .about .content {
+    display: flex;
+  }
+
+  .footer {
+    overflow-x: hidden;
+  }
+}
