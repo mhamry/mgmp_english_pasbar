@@ -546,10 +546,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="calistungALabel">
-              Form Pendaftaran Story Telling Competetion <br />
-              <small secondary>Isi data dengan benar karena data ini akan digunakan sebagai data identitas pada Sertifikat peseta.</small>
-            </h5>
+            <h5 class="modal-title" id="calistungALabel">FORM PENDAFTARAN STORY TELLING COMPETETION <br /></h5>
             <p secondary></p>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -583,7 +580,8 @@
               </div>
               <div class="form-group">
                 <label for="buktitf" class="font-weight-bold">Bukti Transfer</label>
-                <input type="file" class="form-control" id="buktitf" name="buktitf" required autocomplete="off" />
+                <!-- Input file tetap seperti ini -->
+                <input type="file" class="form-control" id="buktitf" name="buktitf" accept="image/*" required />
               </div>
               <!-- alert -->
               <div class="alert alert-success alert-dismissible calistungA-alert d-none" role="alert"><strong>Selamat!</strong> Pendaftaran berhasil, Data anda sudah tersimpan</div>
@@ -611,10 +609,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="calistungBLabel">
-              Form Pendaftaran English Olympiad Competetion. <br />
-              <small secondary>Isi data dengan benar karena data ini akan digunakan sebagai data identitas pada Sertifikat peseta.</small>
-            </h5>
+            <h5 class="modal-title" id="calistungBLabel">FORM PENDAFTARAN ENGLISH OLYMPIAD</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -635,6 +630,7 @@
               <div class="mb-3">
                 <label for="kelas" class="form-label font-weight-bold">Kelas</label>
                 <select class="form-control" id="kelas" name="kelas" required>
+                  <option selected disabled>Pilih Kelas</option>
                   <option value="VII">Kelas VII</option>
                   <option value="VIII">Kelas VIII</option>
                   <option value="IX">Kelas IX</option>

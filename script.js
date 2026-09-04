@@ -442,86 +442,26 @@ formposter.addEventListener("submit", (e) => {
 });
 
 //CalistungA
-const scriptURLcalistungA = "https://script.google.com/macros/s/AKfycbxwRNGH8-nhQH3zFZvOivY2qMqBUi46g84g9pxni0qB97L6cHhvaGzCNQ8ORsTXSdiu/exec";
-const formcalistungA = document.forms["calistungA"];
-const calistungALoading = document.querySelector(".calistungA-loading");
-const calistungAKirim = document.querySelector(".calistungA-kirim");
-const calistungATutup = document.querySelector(".calistungA-tutup");
-const calistungAAlert = document.querySelector(".calistungA-alert");
+// const scriptURLcalistungA = "https://script.google.com/macros/s/AKfycbxwRNGH8-nhQH3zFZvOivY2qMqBUi46g84g9pxni0qB97L6cHhvaGzCNQ8ORsTXSdiu/exec";
+// const formcalistungA = document.forms["calistungA"];
+// const calistungALoading = document.querySelector(".calistungA-loading");
+// const calistungAKirim = document.querySelector(".calistungA-kirim");
+// const calistungATutup = document.querySelector(".calistungA-tutup");
+// const calistungAAlert = document.querySelector(".calistungA-alert");
 
-formcalistungA.addEventListener("submit", (e) => {
-  // Jangan reload halaman
-  e.preventDefault();
-
-  // Tampilkan loading
-  calistungALoading.classList.remove("d-none");
-  calistungAKirim.classList.add("d-none");
-  calistungATutup.classList.add("d-none");
-
-  // KIRIM DATA KE GOOGLE APPS SCRIPT
-  fetch(scriptURLcalistungA, {
-    method: "POST",
-    body: new FormData(formcalistungA),
-  })
-    .then((response) => response.json())
-
-    .then((response) => {
-      console.log("Berhasil:", response);
-
-      // Sembunyikan loading
-      calistungALoading.classList.add("d-none");
-
-      // Tampilkan tombol Kirim
-      calistungAKirim.classList.remove("d-none");
-      calistungATutup.classList.remove("d-none");
-
-      // Tampilkan pesan berhasil
-      calistungAAlert.classList.remove("d-none");
-      calistungAAlert.classList.add("bounce");
-      //hilangkan alert
-      setTimeout(() => {
-        calistungAAlert.classList.add("d-none");
-      }, 5000);
-      setTimeout(() => {
-        tampilAlertWagroup();
-      }, 5000);
-
-      // Kosongkan form
-      formcalistungA.reset();
-    })
-
-    .catch((error) => {
-      console.error("Error:", error);
-
-      calistungALoading.classList.add("d-none");
-      calistungAKirim.classList.remove("d-none");
-
-      alert("Data gagal dikirim!");
-    });
-});
-
-//Calistung B
-
-// const scriptURLcalistungB = "https://script.google.com/macros/s/AKfycbwaLNzPyou-Axm9ROvH4snYnh8mjox6-tg7VIg6liInLhQ9QX6UczvRuUpS8MGOinT8kA/exec";
-// const formcalistungB = document.forms["calistungB"];
-// const calistungBLoading = document.querySelector(".calistungB-loading");
-// const calistungBKirim = document.querySelector(".calistungB-kirim");
-// const calistungBTutup = document.querySelector(".calistungB-tutup");
-// const calistungBAlert = document.querySelector(".calistungB-alert");
-
-// formcalistungB.addEventListener("submit", (e) => {
+// formcalistungA.addEventListener("submit", (e) => {
 //   // Jangan reload halaman
 //   e.preventDefault();
 
 //   // Tampilkan loading
-//   calistungBLoading.classList.remove("d-none");
-//   calistungBKirim.classList.add("d-none");
-//   calistungBTutup.classList.add("d-none");
+//   calistungALoading.classList.remove("d-none");
+//   calistungAKirim.classList.add("d-none");
+//   calistungATutup.classList.add("d-none");
 
 //   // KIRIM DATA KE GOOGLE APPS SCRIPT
-//   fetch(scriptURLcalistungB, {
+//   fetch(scriptURLcalistungA, {
 //     method: "POST",
-//     body: new FormData(formcalistungB),
+//     body: new FormData(formcalistungA),
 //   })
 //     .then((response) => response.json())
 
@@ -529,37 +469,152 @@ formcalistungA.addEventListener("submit", (e) => {
 //       console.log("Berhasil:", response);
 
 //       // Sembunyikan loading
-//       calistungBLoading.classList.add("d-none");
+//       calistungALoading.classList.add("d-none");
 
 //       // Tampilkan tombol Kirim
-//       calistungBKirim.classList.remove("d-none");
-//       calistungBTutup.classList.remove("d-none");
+//       calistungAKirim.classList.remove("d-none");
+//       calistungATutup.classList.remove("d-none");
 
 //       // Tampilkan pesan berhasil
-//       calistungBAlert.classList.remove("d-none");
-//       calistungBAlert.classList.add("bounce");
+//       calistungAAlert.classList.remove("d-none");
+//       calistungAAlert.classList.add("bounce");
 //       //hilangkan alert
 //       setTimeout(() => {
-//         calistungBAlert.classList.add("d-none");
+//         calistungAAlert.classList.add("d-none");
 //       }, 5000);
-
 //       setTimeout(() => {
 //         tampilAlertWagroup();
 //       }, 5000);
 
 //       // Kosongkan form
-//       formcalistungB.reset();
+//       formcalistungA.reset();
 //     })
 
 //     .catch((error) => {
 //       console.error("Error:", error);
 
-//       calistungBLoading.classList.add("d-none");
-//       calistungBKirim.classList.remove("d-none");
+//       calistungALoading.classList.add("d-none");
+//       calistungAKirim.classList.remove("d-none");
 
 //       alert("Data gagal dikirim!");
 //     });
 // });
+
+const scriptURLcalistungA = "https://script.google.com/macros/s/AKfycbzNOWNTvv9RV9T3f9Viimc3Ruuz1N9lx1W0IjGVD51cHT74FGJvS7bBuQzZEHSvjo7w/exec";
+const formcalistungA = document.forms["calistungA"];
+const calistungALoading = document.querySelector(".calistungA-loading");
+const calistungAKirim = document.querySelector(".calistungA-kirim");
+const calistungATutup = document.querySelector(".calistungA-tutup");
+const calistungAAlert = document.querySelector(".calistungA-alert");
+
+// Fungsi pembantu untuk mengubah File ke Base64
+const fileToBase64A = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result.split(",")[1]); // Ambil cuma string Base64-nya
+    reader.onerror = (error) => reject(error);
+  });
+
+formcalistungA.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Tampilkan loading
+  calistungALoading.classList.remove("d-none");
+  calistungAKirim.classList.add("d-none");
+  calistungATutup.classList.add("d-none");
+
+  try {
+    // const fileInput = document.querySelector("#buktitf");
+    // let fileData = "";
+    // let fileName = "";
+    // let fileMimeType = "";
+
+    // // Jika user mengunggah file
+    // if (fileInput.files.length > 0) {
+    //   const file = fileInput.files[0];
+    //   fileData = await fileToBase64(file);
+    //   fileName = file.name;
+    //   fileMimeType = file.type;
+
+    const fileInput = formcalistungA.buktitf;
+
+    let fileData = "";
+    let fileName = "";
+    let fileMimeType = "";
+
+    if (fileInput.files.length > 0) {
+      const file = fileInput.files[0];
+
+      fileData = await fileToBase64A(file);
+      fileName = file.name;
+      fileMimeType = file.type;
+
+      console.log("Nama file:", fileName);
+      console.log("Tipe file:", fileMimeType);
+      console.log("Ukuran:", file.size);
+    }
+
+    // Susun payload/data yang akan dikirim
+    const payload = {
+      // sheet_name: formcalistungA.sheet_name.value,
+      // nama: formcalistungA.nama.value,
+      // sekolah: formcalistungA.sekolah.value,
+      // kelas: formcalistungA.kelas.value,
+      // nowa: formcalistungA.nowa.value,
+      // // Data File
+      // fileData: fileData,
+      // fileName: fileName,
+      // fileMimeType: fileMimeType,
+
+      sheet_name: formcalistungA.sheet_name.value,
+      nama: formcalistungA.nama.value,
+      sekolah: formcalistungA.sekolah.value,
+      kelas: formcalistungA.kelas.value,
+      nowa: formcalistungA.nowa.value,
+
+      fileData: fileData,
+      fileName: fileName,
+      fileMimeType: fileMimeType,
+    };
+
+    // Kirim menggunakan URLSearchParams/FormData teks
+    const response = await fetch(scriptURLcalistungA, {
+      method: "POST",
+      body: new URLSearchParams(payload),
+    });
+
+    const data = await response.json();
+    console.log("Berhasil:", data);
+
+    // Sembunyikan loading & tampilkan tombol
+    calistungALoading.classList.add("d-none");
+    calistungAKirim.classList.remove("d-none");
+    calistungATutup.classList.remove("d-none");
+
+    // Tampilkan alert
+    calistungAAlert.classList.remove("d-none");
+    calistungAAlert.classList.add("bounce");
+
+    setTimeout(() => {
+      calistungAAlert.classList.add("d-none");
+    }, 5000);
+
+    setTimeout(() => {
+      if (typeof tampilAlertWagroup === "function") tampilAlertWagroup();
+    }, 5000);
+
+    formcalistungA.reset();
+  } catch (error) {
+    console.error("Error:", error);
+    calistungALoading.classList.add("d-none");
+    calistungAKirim.classList.remove("d-none");
+    calistungATutup.classList.remove("d-none");
+    alert("Data gagal dikirim!");
+  }
+});
+
+//Calistung B
 
 const scriptURLcalistungB = "https://script.google.com/macros/s/AKfycbwvoOP3ogYs9tyjC_g4BP0HpEfAiA2A8JagJaXkCUhh42uR8JsY6vCjagCadUjTOx84/exec";
 const formcalistungB = document.forms["calistungB"];
@@ -586,27 +641,54 @@ formcalistungB.addEventListener("submit", async (e) => {
   calistungBTutup.classList.add("d-none");
 
   try {
-    const fileInput = document.querySelector("#buktitf");
+    // const fileInput = document.querySelector("#buktitf");
+    // let fileData = "";
+    // let fileName = "";
+    // let fileMimeType = "";
+
+    // // Jika user mengunggah file
+    // if (fileInput.files.length > 0) {
+    //   const file = fileInput.files[0];
+    //   fileData = await fileToBase64(file);
+    //   fileName = file.name;
+    //   fileMimeType = file.type;
+
+    const fileInput = formcalistungB.buktitf;
+
     let fileData = "";
     let fileName = "";
     let fileMimeType = "";
 
-    // Jika user mengunggah file
     if (fileInput.files.length > 0) {
       const file = fileInput.files[0];
+
       fileData = await fileToBase64(file);
       fileName = file.name;
       fileMimeType = file.type;
+
+      console.log("Nama file:", fileName);
+      console.log("Tipe file:", fileMimeType);
+      console.log("Ukuran:", file.size);
     }
 
     // Susun payload/data yang akan dikirim
     const payload = {
+      // sheet_name: formcalistungB.sheet_name.value,
+      // nama: formcalistungB.nama.value,
+      // sekolah: formcalistungB.sekolah.value,
+      // kelas: formcalistungB.kelas.value,
+      // nowa: formcalistungB.nowa.value,
+      // // Data File
+      // fileData: fileData,
+      // fileName: fileName,
+      // fileMimeType: fileMimeType,
+
       sheet_name: formcalistungB.sheet_name.value,
       nama: formcalistungB.nama.value,
       sekolah: formcalistungB.sekolah.value,
       kelas: formcalistungB.kelas.value,
       nowa: formcalistungB.nowa.value,
-      // Data File
+
       fileData: fileData,
       fileName: fileName,
       fileMimeType: fileMimeType,
