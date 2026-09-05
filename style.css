@@ -383,6 +383,11 @@
   color: greenyellow;
   mix-blend-mode: difference;
 }
+
+.agenda p {
+  margin-top: 20px !important;
+  text-indent: 30px;
+}
 @media (min-width: 956px) {
   #bimbel {
     scroll-margin-top: 60px;
@@ -532,5 +537,10 @@
   .contact-wrapper i {
     font-size: 55px;
     color: greenyellow;
+  }
+
+  .agenda p {
+    margin-top: 30px !important;
+    text-indent: 40px;
   }
 }
